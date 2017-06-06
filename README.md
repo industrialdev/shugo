@@ -49,7 +49,7 @@ Update the version number in `shugo.gemspec`, and then run `bundle exec rake rel
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/altmetric/shugo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
+Bug reports and pull requests are welcome on GitHub at https://github.com/industrialdev/shugo. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](contributor-covenant.org) code of conduct.
 
 ## License
 
