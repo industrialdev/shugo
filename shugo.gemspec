@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['andrew.markle@gmail.com']
 
   spec.summary       = %q{Industrial Ruby Style Guide.}
-  spec.description   = %q{Shugo (守護) was a title, commonly translated as "governor", "protector" or "constable", given to certain officials in feudal Japan. They were appointed by the Shogun to oversee one or more of the provinces of Japan.}
+  spec.description   = %q{Shugo (守護) was a title, commonly translated as "governor", "protector" or "constable", given to certain officials in feudal Japan. They were appointed by the Shogun to oversee one or more of the provinces of Japan. This gem uses [Rubocop](https://github.com/bbatsov/rubocop) to enforce a style guide across multiple projects.}
   spec.homepage      = 'https://github.com/industrialdev/shugo'
   spec.license       = 'MIT'
 
