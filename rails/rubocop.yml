@@ -1,0 +1,20 @@
+inherit_from: ../ruby/rubocop.yml
+AllCops:
+  Exclude:
+    - 'db/schema.rb'
+Rails:
+  Enabled: true
+
+# Exclude documentation for classes where it's unnecessary
+Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: true
+  Exclude:
+    - 'test/**/*'
+    - 'app/models/**/*'
+    - 'app/controllers/**/*'
+    - 'app/serializers/**/*'
+
+# Don't enforce delegation. Use only when it makes sense.
+Rails/Delegate:
+  Enabled: false

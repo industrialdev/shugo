@@ -1,0 +1,39 @@
+# Rubocop setup based off of the Ruby Style Guide:
+# https://github.com/bbatsov/ruby-style-guide
+#
+# Rubocop configuration and instructions:
+# https://github.com/bbatsov/rubocop/blob/master/config/
+
+AllCops:
+  DisplayCopNames: true
+  DisplayStyleGuide: true
+  ExtraDetails: true
+  UseCache: true
+
+  Exclude:
+    - 'vendor/**/*'
+    - 'bin/**/*'
+    - 'test/fixtures/**/*'
+    - 'tmp/**/*'
+
+# Outdent private/protected/public so it's easy to read & indentify
+Style/AccessModifierIndentation:
+  EnforcedStyle: outdent
+
+# Projects that have a migration path to Ruby 3+ should have this enabled
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+
+# Prefers [:this, :array] instead of %i(this array)
+Style/SymbolArray:
+  EnforcedStyle: brackets
+
+# Not too little, but not too much.
+Metrics/LineLength:
+  Max: 120

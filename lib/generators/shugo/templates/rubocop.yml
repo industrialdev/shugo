@@ -1,0 +1,2 @@
+inherit_gem:
+  shugo: rails/rubocop.yml
