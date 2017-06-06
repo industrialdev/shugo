@@ -37,3 +37,11 @@ Style/SymbolArray:
 # Not too little, but not too much.
 Metrics/LineLength:
   Max: 120
+
+# Exclude documentation for classes where it's unnecessary
+Style/Documentation:
+  Exclude:
+    - 'test/**/*'
+    - 'app/models/**/*'
+    - 'app/controllers/**/*'
+    - 'app/serializers/**/*'
