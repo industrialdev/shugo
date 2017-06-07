@@ -40,6 +40,8 @@ Metrics/LineLength:
 
 # Exclude documentation for classes where it's unnecessary
 Style/Documentation:
+  Description: 'Document classes and non-namespace modules.'
+  Enabled: true
   Exclude:
     - 'test/**/*'
     - 'app/models/**/*'

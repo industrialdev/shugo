@@ -15,18 +15,10 @@ Gem::Specification.new do |spec|
   spec.license       = 'MIT'
 
   spec.post_install_message = <<-ENDOFMESSAGE
-Make sure to inherit from shugo in your .rubocopy.yml file to get all the style goodness.
+Make sure to inherit from shugo in your .rubocopy.yml file to get the house styles.
 
-If you're in Rails:
-
-inherit_gem:
-  house_style: ruby/rubocop.yml
-
-or...if not in Rails
-
-inherit_gem:
-  house_style: ruby/rubocop.yml
-
+For setup instructions see:
+https://github.com/industrialdev/shugo
   ENDOFMESSAGE
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }
