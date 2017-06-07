@@ -44,7 +44,7 @@ Style/Documentation:
   Enabled: true
   Exclude:
     - 'test/**/*'
-    - '**/test/**/*'
+    - '**/*_test.rb'
     - 'app/models/**/*'
     - 'app/controllers/**/*'
     - 'app/serializers/**/*'
