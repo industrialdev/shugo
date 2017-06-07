@@ -44,6 +44,7 @@ Style/Documentation:
   Enabled: true
   Exclude:
     - 'test/**/*'
+    - '**/test/**/*'
     - 'app/models/**/*'
     - 'app/controllers/**/*'
     - 'app/serializers/**/*'
