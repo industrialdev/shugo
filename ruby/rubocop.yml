@@ -3,6 +3,8 @@
 #
 # Rubocop configuration and instructions:
 # https://github.com/bbatsov/rubocop/blob/master/config/
+#
+# run rubocop --show-cops to get a detailed printout of your rules
 
 AllCops:
   DisplayCopNames: true
@@ -16,27 +18,17 @@ AllCops:
     - 'test/fixtures/**/*'
     - 'tmp/**/*'
 
+#################### Layout ###########################
+
 # Outdent private/protected/public so it's easy to read & indentify
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 
-# Projects that have a migration path to Ruby 3+ should have this enabled
-Style/FrozenStringLiteralComment:
+#################### Style ###########################
+
+# Prefer to use nested classes/modules when it makes sense but use your judgement.
+Style/ClassAndModuleChildren:
   Enabled: false
-
-Metrics/BlockLength:
-  Exclude:
-    - 'Rakefile'
-    - '**/*.rake'
-    - 'test/**/*.rb'
-
-# Prefers [:this, :array] instead of %i(this array)
-Style/SymbolArray:
-  EnforcedStyle: brackets
-
-# Not too little, but not too much.
-Metrics/LineLength:
-  Max: 120
 
 # Exclude documentation for classes where it's unnecessary
 Style/Documentation:
@@ -45,6 +37,40 @@ Style/Documentation:
   Exclude:
     - 'test/**/*'
     - '**/*_test.rb'
-    - 'app/models/**/*'
-    - 'app/controllers/**/*'
-    - 'app/serializers/**/*'
+    - '**/models/**/*'
+    - '**/controllers/**/*'
+    - '**/serializers/**/*'
+
+# Projects that have a migration path to Ruby 3+ should have this enabled
+Style/FrozenStringLiteralComment:
+  Enabled: false
+
+# Prefer [:this, :array] over %i(this array)
+Style/SymbolArray:
+  Enabled: false
+
+#################### Metrics ###########################
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Rakefile'
+    - '**/*.rake'
+    - 'test/**/*.rb'
+
+# Not too little, but not too much.
+Metrics/LineLength:
+  Max: 120
+
+Metrics/MethodLength:
+  Enabled: true
+  Max: 12
+
+#################### Bundler ###############################
+Bundler/OrderedGems:
+  Description: >-
+                 Gems within groups in the Gemfile should be alphabetically sorted.
+  Enabled: true
+  Include:
+    - '**/Gemfile'
+    - '**/gems.rb'
+    - '**/Gemfile.next'
