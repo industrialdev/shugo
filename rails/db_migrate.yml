@@ -13,7 +13,7 @@ Style/BlockDelimiters:
 Style/Documentation:
   Enabled: false
 
-Style/EmptyLineBetweenDefs:
+Layout/EmptyLineBetweenDefs:
   Enabled: false
 
 Style/StringLiterals:
