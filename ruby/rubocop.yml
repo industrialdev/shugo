@@ -17,7 +17,7 @@ AllCops:
     - 'tmp/**/*'
 
 # Outdent private/protected/public so it's easy to read & indentify
-Style/AccessModifierIndentation:
+Layout/AccessModifierIndentation:
   EnforcedStyle: outdent
 
 # Projects that have a migration path to Ruby 3+ should have this enabled
