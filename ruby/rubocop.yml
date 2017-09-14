@@ -30,16 +30,9 @@ Layout/AccessModifierIndentation:
 Style/ClassAndModuleChildren:
   Enabled: false
 
-# Exclude documentation for classes where it's unnecessary
+# Do not require documentation at the top of classes
 Style/Documentation:
-  Description: 'Document classes and non-namespace modules.'
-  Enabled: true
-  Exclude:
-    - 'test/**/*'
-    - '**/*_test.rb'
-    - '**/models/**/*'
-    - '**/controllers/**/*'
-    - '**/serializers/**/*'
+  Enabled: false
 
 # Projects that have a migration path to Ruby 3+ should have this enabled
 Style/FrozenStringLiteralComment:
@@ -51,19 +44,35 @@ Style/SymbolArray:
 
 #################### Metrics ###########################
 
-Metrics/BlockLength:
-  Exclude:
-    - 'Rakefile'
-    - '**/*.rake'
-    - 'test/**/*.rb'
+Metrics/AbcSize:
+  Enabled: false
 
-# Not too little, but not too much.
+Metrics/BlockNesting:
+  Enabled: false
+
+Metrics/ClassLength:
+  Enabled: false
+
+Metrics/ModuleLength:
+  Enabled: false
+
+Metrics/CyclomaticComplexity:
+  Enabled: false
+
 Metrics/LineLength:
-  Max: 120
+  Enabled: false
 
 Metrics/MethodLength:
-  Enabled: true
-  Max: 12
+  Enabled: false
+
+Metrics/BlockLength:
+  Enabled: false
+
+Metrics/ParameterLists:
+  Enabled: false
+
+Metrics/PerceivedComplexity:
+  Enabled: false
 
 #################### Bundler ###############################
 Bundler/OrderedGems:
